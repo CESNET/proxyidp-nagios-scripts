@@ -20,7 +20,6 @@ BASENAME=$(basename $0)
 
 ## Get host IP
 IP=($(hostname -I))
-IP="78.128.216.77"
 
 
 TEST_SITE=$1
