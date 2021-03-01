@@ -1,9 +1,21 @@
 #!/bin/bash
 
-USER=$1
-PASSWD=$2
-# List of addresses separated by space
-machines=$3
+FILENAME=$1
+
+if [ "$#" -ne 1 ]; then
+    echo "You must enter exactly 1 command line arguments!"
+    echo "The first param must be the file with the configuration!"
+    exit 127
+fi
+
+if [[ ! -f ${FILENAME} ]]; then
+    echo "File ${FILENAME} doesn't exist."
+    echo "The first param must be the file with the configuration!"
+    exit 127
+fi
+
+source "${FILENAME}"
+
 count=0
 
 for i in ${machines}; do

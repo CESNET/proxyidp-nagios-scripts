@@ -162,10 +162,10 @@ This script checks the database replication
 
 * How to run this script:
     * Params:
-        * 1 - Login used for connection to the database
-        * 2 - Password used for connection to the database (the password has to be in quotes)
-        * 3 - List of addresses separated by space (the list has to be in quotes)
+        * 1 - Path to the configuration
+    * Requirements:
+        * Configuration file - Example configuration file: `mariadb_replication_check_config.sh`
     * Example:
         <pre>
-        ./mariadb_replication_check.sh "USER" "PASSWORD" "Address1 Address2 Address3"
+        ./mariadb_replication_check.sh "mariadb_check_config.sh"
         </pre>
